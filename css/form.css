@@ -1,0 +1,79 @@
+:root {
+  --primary-color: #6095c9;
+  --secondary-color: #eb5e55;
+  --accent-color: #d81e5b;
+  --title-color: #15212c;
+  --title-font: "Roboto", sans-serif;
+  --body-font: "Inter", sans-serif;
+}
+
+small {
+  font-size: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+/* Container for form */
+.booking-form-container {
+  width: auto;
+  max-width: 900px;
+  padding: 20px 30px;
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
+  color: var(--title-color);
+}
+
+/* Form for adding new posts */
+.booking-form {
+  padding: 20px 0px 20px 0px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+textarea,
+select {
+  margin-top: 5px;
+  border-radius: var(--border-radius);
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+}
+
+.form-group label,
+.form-group input,
+.form-group textArea,
+.form-group select {
+  width: 100%;
+  font-size: 18px;
+}
+
+/* Media queries - Smart phone */
+@media screen and (max-width: 500px) {
+  .booking-form-container {
+    margin: 20px;
+    font-size: 1em;
+  }
+
+  .form-group label,
+  .form-group input,
+  .form-group textArea,
+  .form-group select {
+    width: 100%;
+    font-size: 1em;
+  }
+}

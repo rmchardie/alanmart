@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap");
+
+:root {
+  --primary-color: #6095c9;
+  --secondary-color: #eb5e55;
+  --accent-color: #d81e5b;
+  --title-color: #15212c;
+  --title-font: "Roboto", sans-serif;
+  --body-font: "Inter", sans-serif;
+  --border-radius: 15px;
+  --button-radius: 10px;
+  --fw-body: 100;
+  --fw-bold: 800;
+  --fw-title: 400;
+  --fw-number: 800;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.what-we-offer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.what-we-offer-text {
+  align-self: flex-start;
+  margin-left: 20px;
+}
+
+.what-we-offer-text ul {
+  margin-left: 30px;
+}
+
+.services-tagline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-container {
+  margin: 20px auto;
+  width: min(90%, 75rem);
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2em;
+}
+
+.service {
+  padding: 20px;
+}
+
+.service img {
+  width: 200px;
+  height: 200px;
+  border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 900px) {
+  .what-we-offer-container {
+    flex-direction: column;
+  }
+
+  .what-we-offer-text {
+    margin-left: 0;
+  }
+
+  .services-container {
+    grid-auto-flow: row;
+    text-align: center;
+    margin: 10px;
+    gap: 0.5em;
+  }
+
+  /* .service {
+    padding: 0;
+  } */
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin area - Alanmart</title>
+    <meta name="application-name" content="Alanmart Day Care" />
+    <meta
+      name="description"
+      content="Alanmart provides social care for adults in the Falkirk area, offering them the opportunity for companionship in an environment supported by qualified and caring staff. 
+            Services available include Day Care, Respite and Outreach."
+    />
+    <meta name="author" content="Ross McHardie" />
+    <meta name="ROBOTS" content="INDEX, FOLLOW" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Hamburger menu stylesheet -->
+    <link rel="stylesheet" href="../css/menu.css" />
+    <!-- Admin stylesheet -->
+    <link rel="stylesheet" href="admin.css" />
+    <!-- Font Awesome stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="../images/favico.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="mobile">
+        <div class="mobile-logo">
+          <img src="../images/logo.png" alt="Alanmart logo" />
+        </div>
+        <div class="hamburger-icon" id="icon">
+          <div class="icon-1" id="a"></div>
+          <div class="icon-2" id="b"></div>
+          <div class="icon-3" id="c"></div>
+          <div class="clear"></div>
+        </div>
+        <div class="hamburger-menu">
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../about-us.html">About us</a>
+            </li>
+            <li>
+              <a href="../services.html">What we offer</a>
+            </li>
+            <li>
+              <a href="../updates.html">Latest updates</a>
+            </li>
+            <li>
+              <a href="../contact.html">Contact us</a>
+            </li>
+            <li>
+              <a href="../newsletter.pdf" class="btn btn-secondary"
+                >Newsletter</a
+              >
+            </li>
+            <li>
+              <a href="#book-a-visit" class="btn visit">Book a visit</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="hamburger-menu-container"
+          id="hamburger-menu-container"
+        ></div>
+      </div>
+    </header>
+    <!-- Start of Back to top button -->
+    <a id="back-to-top-btn" title="Go to top">
+      <i class="fa-solid fa-circle-chevron-up"></i>
+    </a>
+    <main class="container">
+      <div class="desktop">
+        <!-- End of Back to top button -->
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../images/logo.png" alt="Alanmart logo" />
+          </a>
+        </div>
+        <div class="nav">
+          <nav>
+            <ul>
+              <li><a href="write-update.html">Write update</a></li>
+              <li><a href="upload-newsletter.html">Upload newsletter</a></li>
+              <li>
+                <a href="logout.php" class="btn btn-primary">
+                  <i
+                    class="fa-solid fa-sign-out"
+                    style="margin-right: 10px"
+                  ></i>
+                  Log out</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="update-container">
+        <div class="update-form-container">
+          <h1>Create new update</h1>
+          <!-- Container for form -->
+          <div class="formContainer">
+            <!-- Add new post form -->
+            <form
+              class="updateForm"
+              id="updateForm"
+              action="addUpdate.php"
+              method="post"
+            >
+              <div class="formGroup">
+                <input type="hidden" name="postDate" id="postDate" />
+              </div>
+              <div class="formGroup">
+                <label for="postTitle">Post title</label>
+                <input type="text" name="postTitle" id="postTitle" />
+              </div>
+              <div class="formGroup">
+                <label for="postContent">Post content</label>
+                <textarea
+                  name="postContent"
+                  id="postContent"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <div class="formGroup">
+                <label for="postLink">Post URL</label>
+                <input
+                  type="url"
+                  name="postLink"
+                  id="postLink"
+                  placeholder="e.g. www.alanmart.co.uk"
+                />
+              </div>
+              <div class="formGroup">
+                <label for="postImage"
+                  >Post image <small>(Optional)</small></label
+                >
+                <input type="file" name="postImage" id="postImage" />
+              </div>
+              <div class="formGroup">
+                <button class="addPost btn" id="addPost" type="submit">
+                  Add post
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="update-preview-container">
+          <h1>Update preview</h1>
+          <small>* Image won't display until after upload</small>
+          <div class="update-preview">
+            <p id="preview-date"></p>
+            <h2 id="preview-title"></h2>
+            <textarea name="text" id="preview-content" disabled></textarea>
+            <div class="preview-link-container">
+              <a id="preview-link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="preview-update.js"></script>
+  </body>
+</html>
