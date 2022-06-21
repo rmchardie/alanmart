@@ -79,7 +79,7 @@ html {
 
   .services-container {
     grid-auto-flow: row;
-    text-align: center;
+    text-align: justify;
     margin: 10px;
     gap: 0.5em;
   }
