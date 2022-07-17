@@ -1,0 +1,393 @@
+/* * {
+  outline: solid 1px #15212c;
+} */
+
+body {
+  background-color: whitesmoke;
+}
+
+a {
+  margin-right: none;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #15212c;
+  margin-bottom: 0;
+}
+
+.confirm-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+.confirm-modal,
+.new-post-modal,
+.confirm-logout-modal {
+  background-color: #fff;
+  padding: 100px;
+  border-radius: 10px;
+  text-align: center;
+  border: solid 10px #6095c9;
+}
+
+.confirm-modal i,
+.confirm-modal h1 {
+  color: #ff0000;
+}
+
+.confirm-modal button {
+  width: auto;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+.confirm-modal-buttons {
+  margin-top: 20px;
+}
+
+#logOutBtn {
+  cursor: pointer;
+}
+
+#yes,
+#logOutYes {
+  margin-right: 30px;
+}
+
+#yes:hover,
+#no:hover,
+#logOutYes:hover,
+#logOutNo:hover {
+  background-color: #6095c9;
+}
+
+.display-updates {
+  display: flex;
+  flex-direction: column;
+}
+
+.navButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.new-update-btn,
+.upload-newsletter-btn {
+  align-self: end;
+  margin-bottom: 20px;
+}
+
+.new-update-btn button,
+.upload-newsletter-btn button {
+  cursor: pointer;
+  color: #6095c9;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.new-update-btn button:hover,
+.upload-newsletter-btn button:hover {
+  background-color: #6095c9;
+  color: #333;
+}
+
+.editIcon {
+  margin-right: 10px;
+}
+
+.updateHeader {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+form {
+  flex-direction: column;
+  gap: 0;
+}
+
+.update {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-bottom: solid 1px rgba(0, 119, 255, 0.2);
+  padding: 20px 0 20px 0;
+  width: 100%;
+}
+
+.checkHeader,
+.IDHeader,
+.titleHeader,
+.dateHeader,
+.deleteHeader {
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.check,
+.post-id,
+.post-title,
+.post-date,
+.delete {
+  font-size: 18px;
+  font-weight: normal;
+  width: 100%;
+}
+
+.deleteIcon {
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.deleteIcon:hover {
+  transform: scale(1.2);
+}
+
+/* Container for form */
+.blogContainer {
+  width: auto;
+  max-width: 900px;
+  padding: 20px 30px;
+  border: solid 10px #6095c9;
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h2 {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+#closeBtn,
+#closeNewsletterModalBtn,
+#closeReuploadBtn {
+  cursor: pointer;
+  color: #6095c9;
+}
+
+#closeBtn:hover,
+#closeNewsletterModalBtn:hover,
+#closeReuploadBtn:hover {
+  transform: scale(1.2);
+}
+
+/* Form for adding new posts */
+.blogPostForm {
+  padding: 0px 0px 20px 0px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup input,
+textarea {
+  margin-top: 5px;
+  border: solid 1px #333;
+  border-radius: var(--border-radius);
+  padding: 5px 10px;
+}
+
+.formGroup label,
+.formGroup input,
+.formGroup textArea {
+  width: 100%;
+  font-size: 18px;
+}
+
+.formGroup textArea {
+  height: 100px;
+  resize: none;
+}
+
+.addPost {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: #6095c9;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.addPost:hover {
+  filter: brightness(115%);
+}
+
+#uploadSuccess {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.successText {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #05c505;
+}
+
+.successIcon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: #05c505;
+  border: solid 3px #05c505;
+  border-radius: 50%;
+}
+
+.errorText {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #ff0000;
+}
+
+.errorIcon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: #ff0000;
+  border: solid 3px #ff0000;
+  border-radius: 50%;
+}
+
+.closeMessage {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+  z-index: -1;
+}
+
+/* Media queries - Smart phone */
+@media screen and (max-width: 500px) {
+  .closeMessage {
+    font-size: 12px;
+  }
+
+  .navButtons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .mobile-sign-out {
+    text-align: center;
+    background-color: #6095c9;
+    color: #fff;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+  }
+
+  .mobile-sign-out i {
+    margin-left: 10px;
+  }
+
+  .formContainer {
+    margin: 20px;
+    font-size: 1em;
+  }
+
+  .formGroup label,
+  .formGroup input,
+  .formGroup textArea {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .formGroup textArea {
+    height: 75px;
+  }
+
+  .post-date,
+  .dateHeader {
+    display: none;
+  }
+
+  h1,
+  .checkHeader,
+  .IDHeader,
+  .titleHeader,
+  .dateHeader,
+  .deleteHeader {
+    font-size: 0.9em;
+  }
+
+  .new-update-btn {
+    align-self: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .confirm-modal {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .confirm-modal-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blogContainer {
+    margin: 20px;
+    font-size: 1em;
+  }
+
+  .formGroup label,
+  .formGroup input,
+  .formGroup textArea {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 12px;
+  }
+}
+
+/* Media Query for Smart phones */
+@media screen and (max-width: 900px) {
+  .admin-buttons {
+    flex-direction: column;
+  }
+
+  .button a {
+    padding: 10px 20px;
+  }
+}
